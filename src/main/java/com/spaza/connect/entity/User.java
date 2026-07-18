@@ -5,14 +5,24 @@ import lombok.Data;
 import java.util.HashSet;
 import java.util.Set;
 
-@Entity @Table(name = "users") @Data
+@Entity 
+@Table(name = "users") 
+@Data
 public class User {
-    @Id @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Id 
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
+
     @Column(unique = true, nullable = false)
     private String username; 
+
     @Column(nullable = false)
     private String password;
+
+    // Added: Unique, mandatory email address field for notifications
+    @Column(unique = true, nullable = false)
+    private String email;
+
     private String shopName;
     private String clusterLocation; // e.g., Khayelitsha, Soweto
 
@@ -22,4 +32,3 @@ public class User {
             inverseJoinColumns = @JoinColumn(name = "role_id"))
     private Set<Role> roles = new HashSet<>();
 }
-

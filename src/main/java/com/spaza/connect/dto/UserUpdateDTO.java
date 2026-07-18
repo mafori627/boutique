@@ -4,18 +4,14 @@ import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Size;
 
-public class RegisterRequest {
-
-    @NotBlank(message = "Username cannot be empty")
-    @Size(min = 4, max = 20, message = "Username must be between 4 and 20 characters")
-    private String username;
+public class UserUpdateDTO {
 
     @NotBlank(message = "Password cannot be empty")
     @Size(min = 6, message = "Password must be at least 6 characters")
     private String password;
 
     @NotBlank(message = "Email address cannot be empty")
-    @Email(message = "Please provide a valid email format (e.g., owner@spaza.co.za)")
+    @Email(message = "Please provide a valid email format")
     private String email;
 
     @NotBlank(message = "Shop name cannot be blank")
@@ -25,9 +21,6 @@ public class RegisterRequest {
     private String clusterLocation;
 
     // Getters and Setters
-    public String getUsername() { return username; }
-    public void setUsername(String username) { this.username = username; }
-
     public String getPassword() { return password; }
     public void setPassword(String password) { this.password = password; }
 
