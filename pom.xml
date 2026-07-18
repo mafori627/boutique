@@ -35,6 +35,8 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
 		<dependency>
+<<<<<<< HEAD
+=======
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-validation</artifactId>
         </dependency>
@@ -45,6 +47,7 @@
         </dependency>
 
 		<dependency>
+>>>>>>> 7a1946673c54bd56f31c9596a5f3de25f5c31922
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-security</artifactId>
 		</dependency>
