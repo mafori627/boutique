@@ -1,3 +1,7 @@
 spring:
   application:
+<<<<<<< HEAD
+    name: boutique
+=======
     name: SpazaConnect
+>>>>>>> 7a1946673c54bd56f31c9596a5f3de25f5c31922
